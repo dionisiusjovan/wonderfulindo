@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Wonderful Indonesia</string>
+    <string name="register">Register</string>
+    <string name="email">Email Address</string>
+    <string name="pass">Password</string>
+    <string name="signinhere">Sign In here if You have An Account</string>
+    <string name="signin">Sign In</string>
+
+</resources>
