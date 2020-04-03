@@ -10,5 +10,11 @@
     <string name="tour">Tour</string>
     <string name="hotel">Hotel</string>
     <string name="hint">Where do we go today?</string>
+    <string name="borobudur">Borobudur Temple</string>
+    <string name="gelato">Tempo Gelato</string>
+    <string name="gudeg">Gudeg Mbah Lindu</string>
+    <string name="gereja">Gereja Ayam</string>
+    <string name="bucketlist">Jogja s Bucket List</string>
+    <string name="desBL">Best experience in the Special Region</string>
 
 </resources>

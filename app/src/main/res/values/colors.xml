@@ -6,4 +6,5 @@
     <color name="colorAccent">#D81B60</color>
     <color name="black">#000000</color>
     <color name="buttonwhite">#F2F2F2</color>
+    <color name="shadow">#4d4d4d</color>
 </resources>
