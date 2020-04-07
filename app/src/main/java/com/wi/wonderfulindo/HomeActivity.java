@@ -12,13 +12,15 @@ import android.os.PersistableBundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity implements MainAdapter.OnPicClickListener {
    //Button btnSignOut;
+   private static final String TAG = "HomeActivity";
     Button btnResto, btnHotel, btnTour;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
@@ -56,9 +58,19 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         //inisialisasi MainAdapter
-        mainAdapter = new MainAdapter(HomeActivity.this,mainModels);
+        mainAdapter = new MainAdapter(HomeActivity.this,mainModels, this);
         //set mainpter ke recycler view
         recyclerView.setAdapter(mainAdapter);
+
+    }
+
+    @Override
+    public void onPicClick(int position) {
+        Log.d(TAG, "onPicClick: clicked");
+        Intent intent = new Intent(this, GridItemActivity.class);
+        intent.putExtra("name", mainModels.get(position).getNamatempat());
+        intent.putExtra("image", mainModels.get(position).getTempat());
+        startActivity(intent);
     }
 
     /*Override

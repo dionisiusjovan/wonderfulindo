@@ -30,6 +30,9 @@ public class RegisterActivity extends AppCompatActivity {
         emailId = findViewById(R.id.txtEmail);
         password = findViewById(R.id.txtPassword);
         btnRegister = findViewById(R.id.btnregister);
+
+
+
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +67,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        tvSignIn = (TextView) findViewById(R.id.signin);
+        tvSignIn = findViewById(R.id.signin);
         tvSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
