@@ -4,16 +4,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="-30dp"
         android:src="@drawable/getwaves3" />
 
+    <Button
+        android:id="@+id/loginBack"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="309dp"
+        android:background="@drawable/button_bulet"
+        android:drawableTop="@drawable/ic_arrow_back_black_30dp"
+        android:shadowColor="@color/shadow" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/montserratblack"
         android:gravity="center_horizontal"
         android:text="@string/signin"
@@ -56,12 +68,21 @@
         android:inputType="textPassword"
         />
 
+    <ProgressBar
+        android:id="@+id/loginProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:visibility="gone"/>
+
     <Button
         android:id="@+id/btnsignin"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:text="@string/signin"
         android:fontFamily="@font/montserratmedium"
         android:textColor="@color/colorSplash"

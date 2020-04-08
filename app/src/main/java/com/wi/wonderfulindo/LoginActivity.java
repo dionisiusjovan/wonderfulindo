@@ -6,6 +6,7 @@ import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -20,9 +21,11 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
     EditText emailAd, pwd;
-    Button btnLogin;
+    Button btnLogin, btnback;
+    ProgressBar progressBar;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +33,16 @@ public class LoginActivity extends AppCompatActivity {
         mFirebaseAuth = FirebaseAuth.getInstance();
         emailAd = findViewById(R.id.editEmail);
         pwd = findViewById(R.id.editPassword);
+        progressBar = findViewById(R.id.loginProgressBar);
         btnLogin = findViewById(R.id.btnsignin);
+        btnback = findViewById(R.id.loginBack);
+
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            }
+        });
 
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -59,9 +71,11 @@ public class LoginActivity extends AppCompatActivity {
                 } else if(email.isEmpty() && pass.isEmpty()){
                     Toast.makeText(LoginActivity.this, "Fields are Empty", Toast.LENGTH_SHORT).show();
                 } else if(!(email.isEmpty() && pass.isEmpty())){
+                    progressBar.setVisibility(View.VISIBLE);
                     mFirebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+                            progressBar.setVisibility(View.GONE);
                             if (!task.isSuccessful()) {
                                 Toast.makeText(LoginActivity.this, "An error occured! Please Retry to Sign In", Toast.LENGTH_SHORT).show();
                             } else{
