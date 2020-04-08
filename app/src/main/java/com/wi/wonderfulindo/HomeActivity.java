@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class HomeActivity extends AppCompatActivity implements MainAdapter.OnPicClickListener {
    //Button btnSignOut;
    private static final String TAG = "HomeActivity";
-    Button btnResto, btnHotel, btnTour;
+    Button btnResto, btnHotel, btnTour, btnProfile;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
@@ -62,6 +62,13 @@ public class HomeActivity extends AppCompatActivity implements MainAdapter.OnPic
         //set mainpter ke recycler view
         recyclerView.setAdapter(mainAdapter);
 
+        btnProfile = findViewById(R.id.bttnProfile);
+        btnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
+            }
+        });
     }
 
     @Override
@@ -85,16 +92,5 @@ public class HomeActivity extends AppCompatActivity implements MainAdapter.OnPic
                 startActivity(intent);
             }
         })*/
-
-
-        /*btnSignOut = findViewById(R.id.btnLogout);
-        btnSignOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }*/
-        //});
     }
 
