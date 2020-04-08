@@ -7,24 +7,6 @@
     tools:context=".MainActivity"
     android:background="@drawable/background3">
 
-    <EditText
-        android:id="@+id/searchBar"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginBottom="688dp"
-        android:background="@drawable/search_bar"
-        android:fontFamily="@font/geosans_light"
-        android:inputType="text"
-        android:text="@string/hint"
-        android:textColor="@color/black"
-        android:textSize="12sp" />
-
     <Button
         android:id="@+id/bttnProfile"
         android:layout_width="35dp"
@@ -44,11 +26,11 @@
         android:id="@+id/bttnBack"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_alignEnd="@+id/searchBar"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="237dp"
-        android:layout_marginBottom="688dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="694dp"
+        android:layout_toStartOf="@+id/bttnProfile"
         android:background="@drawable/button_bulet"
         android:drawableTop="@drawable/ic_arrow_back_black_30dp"
         android:shadowColor="@color/shadow" />
