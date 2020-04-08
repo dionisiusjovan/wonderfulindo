@@ -43,5 +43,12 @@ public class GridItemActivity extends AppCompatActivity {
             }
         });
 
+        maps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GridItemActivity.this, MapActivity.class));
+            }
+        });
+
     }
 }
