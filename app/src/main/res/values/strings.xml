@@ -1,10 +1,16 @@
 <resources>
-    <string name="app_name">Wonderful Indonesia</string>
+    <string name="app_name">Explore Jogja</string>
     <string name="register">Register</string>
     <string name="email">Email Address</string>
     <string name="pass">Password</string>
+    <string name="oldpass">Your Previous Password</string>
+    <string name="newpass">Your New Password</string>
+    <string name="confirm">Confirm Your New Password</string>
+    <string name="save">Save</string>
+    <string name="change">Change Password</string>
     <string name="signinhere">Sign In here if You have An Account</string>
     <string name="signin">Sign In</string>
+    <string name="signout">Sign Out</string>
     <string name="jogja">Jogja is a talented teaser, capable of enchanting the heart of anyone visiting her. In just a short time, many have already fallen in love with her. There are reasons why people would refuse to leave her. Her simplicity, friendliness, arts and culture, culinary, to her different kind of life rhythm. It is no wonder that falling in love with her is just irresistible.</string>
     <string name="resto">Restaurant</string>
     <string name="tour">Tour</string>

@@ -37,25 +37,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547" />
+        app:layout_constraintTop_toBottomOf="@+id/txtJogja"
+        app:layout_constraintVertical_bias="0.100" />
 
     <TextView
         android:id="@+id/txtresto"
         android:layout_width="51dp"
         android:layout_height="14dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/geosans_light"
         android:text="@string/resto"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtHotel"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttnFood" />
+
+    <TextView
+        android:id="@+id/txtHotel"
+        android:layout_width="46dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/geosans_light"
+        android:text="@string/hotel"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/txtTour"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttnHotel" />
+
+    <TextView
+        android:id="@+id/txtBucketL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginBottom="236dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="@string/bucketlist"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintHorizontal_bias="0.028"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bttnFood"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bttnHotel"
@@ -70,24 +100,7 @@
         app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toEndOf="@+id/bttnFood"
         app:layout_constraintTop_toBottomOf="@+id/txtJogja"
-        app:layout_constraintVertical_bias="0.146" />
-
-    <TextView
-        android:id="@+id/txtHotel"
-        android:layout_width="46dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/geosans_light"
-        android:text="@string/hotel"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.248"
-        app:layout_constraintStart_toEndOf="@+id/txtresto"
-        app:layout_constraintTop_toBottomOf="@+id/bttnHotel"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.100" />
 
     <Button
         android:id="@+id/bttnTour"
@@ -101,25 +114,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.364"
         app:layout_constraintStart_toEndOf="@+id/bttnHotel"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.547" />
+        app:layout_constraintTop_toBottomOf="@+id/txtJogja"
+        app:layout_constraintVertical_bias="0.100" />
 
     <TextView
         android:id="@+id/txtTour"
         android:layout_width="46dp"
         android:layout_height="15dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/geosans_light"
         android:text="@string/tour"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
-        app:layout_constraintStart_toEndOf="@+id/txtHotel"
-        app:layout_constraintTop_toBottomOf="@+id/bttnTour"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.805"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttnTour" />
 
     <EditText
         android:id="@+id/searchBar"
@@ -157,23 +168,6 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txtBucketL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="236dp"
-        android:fontFamily="@font/montserratbold"
-        android:text="@string/bucketlist"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtresto"
-        app:layout_constraintVertical_bias="0.678" />
-
-    <TextView
         android:id="@+id/txtDescBL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -192,13 +186,14 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/slideBL"
         android:layout_width="387dp"
-        android:layout_height="202dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="35dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHotel"
-        app:layout_constraintVertical_bias="0.804" />
+        app:layout_constraintTop_toBottomOf="@+id/txtBucketL" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
