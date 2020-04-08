@@ -3,6 +3,11 @@
     <string name="register">Register</string>
     <string name="email">Email Address</string>
     <string name="pass">Password</string>
+    <string name="oldpass">Your Previous Password</string>
+    <string name="newpass">Your New Password</string>
+    <string name="confirm">Confirm Your New Password</string>
+    <string name="save">Save</string>
+    <string name="change">Change Password</string>
     <string name="signinhere">Sign In here if You have An Account</string>
     <string name="signin">Sign In</string>
     <string name="signout">Sign Out</string>

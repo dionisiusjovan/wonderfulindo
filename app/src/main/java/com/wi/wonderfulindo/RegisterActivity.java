@@ -57,6 +57,9 @@ public class RegisterActivity extends AppCompatActivity {
                     password.requestFocus();
                 } else if(email.isEmpty() && pass.isEmpty()){
                     Toast.makeText(RegisterActivity.this, "Fields are Empty", Toast.LENGTH_SHORT).show();
+                } else if(pass.length() < 8){
+                    password.setError("Password can't be less then 8 characters!");
+                    password.requestFocus();
                 } else if(!(email.isEmpty() && pass.isEmpty())){
                     progressBar.setVisibility(View.VISIBLE);
                     mFirebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
@@ -64,7 +67,7 @@ public class RegisterActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             progressBar.setVisibility(View.GONE);
                             if (!task.isSuccessful()){
-                                Toast.makeText(RegisterActivity.this, "Register Unsuccessful", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             } else {
                                 startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                             }
