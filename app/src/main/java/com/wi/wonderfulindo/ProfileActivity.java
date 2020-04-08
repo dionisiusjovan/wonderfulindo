@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    Button btnSignOut;
+    Button btnSignOut, btnChange;
     ImageView back;
     TextView userEmail;
     FirebaseAuth firebaseAuth;
@@ -35,6 +35,14 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ProfileActivity.this, HomeActivity.class));
+            }
+        });
+
+        btnChange = findViewById(R.id.btnChangePass);
+        btnChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProfileActivity.this, ChangePasswordActivity.class));
             }
         });
 
