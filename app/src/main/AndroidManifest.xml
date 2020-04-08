@@ -34,7 +34,8 @@
         <activity
             android:name=".LoginActivity"
             android:theme="@style/RegisterTheme" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/RegisterTheme"/>
         <activity
             android:name=".GridItemActivity"
             android:theme="@style/RegisterTheme" />

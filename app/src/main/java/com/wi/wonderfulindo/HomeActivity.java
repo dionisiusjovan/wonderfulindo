@@ -69,6 +69,15 @@ public class HomeActivity extends AppCompatActivity implements MainAdapter.OnPic
                 startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
             }
         });
+
+        btnResto = findViewById(R.id.bttnFood);
+        btnResto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -84,13 +93,6 @@ public class HomeActivity extends AppCompatActivity implements MainAdapter.OnPic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        btnResto = findViewById(R.id.bttnFood);
-        btnResto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(intent);
-            }
-        })*/
+        */
     }
 
