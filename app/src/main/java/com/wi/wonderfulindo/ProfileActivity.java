@@ -25,7 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
         firebaseAuth = FirebaseAuth.getInstance();
-        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        final FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
 
         userEmail = findViewById(R.id.txtUserEmail);
         userEmail.setText(firebaseUser.getEmail());
@@ -34,8 +34,7 @@ public class ProfileActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ProfileActivity.this, HomeActivity.class));
-                finish();
+                onBackPressed();
             }
         });
 
@@ -51,11 +50,11 @@ public class ProfileActivity extends AppCompatActivity {
         btnSignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FirebaseAuth.getInstance().signOut();
-                Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                firebaseAuth.signOut();
+                Intent intent = new Intent(ProfileActivity.this, RegisterActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
+                finish();
             }
         });
     }

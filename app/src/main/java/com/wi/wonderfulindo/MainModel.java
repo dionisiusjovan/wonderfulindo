@@ -4,12 +4,13 @@ public class MainModel {
     Integer tempat;
     String namatempat;
     String desctempat;
-    String[] latlong;
+    String koordinat;
 
-    public MainModel(Integer tempat, String namatempat, String desctempat){
+    public MainModel(Integer tempat, String namatempat, String desctempat, String koord){
         this.namatempat = namatempat;
         this.tempat = tempat;
         this.desctempat = desctempat;
+        this.koordinat = koord;
     }
 
     public Integer getTempat(){
@@ -22,5 +23,9 @@ public class MainModel {
 
     public String getDesctempat() {
         return desctempat;
+    }
+
+    public String getKoordinat() {
+        return koordinat;
     }
 }

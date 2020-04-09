@@ -6,15 +6,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class HotelActivity extends AppCompatActivity {
 
     GridView gridView;
+    Button back,profile;
 
     //isi hotel
     String[] namaHotel ={"The Phoenix Hotel Yogyakarta","Lafayette Boutique Hotel", "Hyatt Regency Yogyakarta","Sheraton Mustika Yogyakarta Resort & Spa", "The 1O1 Yogyakarta Tugu Hotel"};
@@ -36,12 +40,19 @@ public class HotelActivity extends AppCompatActivity {
                     "Address: Jalan Margoutomo No.103 (Mangkubumi), Yogyakarta 55232 – Indonesia\n" +
                     "Contact:  +62 274 2920101 "};
     int[] imgHotel={R.drawable.hotel1, R.drawable.hotel2,R.drawable.hotel3, R.drawable.hotel4, R.drawable.hotel5};
-    String[] latlong = {};
+    String[] latlong = {"-7.782559, 110.368496", "-7.759190, 110.387470", "-7.740624, 110.372961", "-7.781701, 110.428074", "-7.784115, 110.366571"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final ArrayList<MainModel> hotelList = new ArrayList<>();
+
+        for (int i = 0; i < imgHotel.length; i++){
+            MainModel mainModel = new MainModel(imgHotel[i], namaHotel[i], desHotel[i], latlong[i]);
+            hotelList.add(mainModel);
+        }
 
         gridView = findViewById(R.id.gridView);
 
@@ -54,10 +65,27 @@ public class HotelActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), GridItemActivity.class);
-                intent.putExtra("name", namaHotel[i]);
-                intent.putExtra("image", imgHotel[i]);
-                intent.putExtra("desc", desHotel[i]);
+                intent.putExtra("name", hotelList.get(i).getNamatempat());
+                intent.putExtra("image", hotelList.get(i).getTempat());
+                intent.putExtra("desc", hotelList.get(i).getDesctempat());
+                intent.putExtra("latlong", hotelList.get(i).getKoordinat());
                 startActivity(intent);
+            }
+        });
+
+        back = findViewById(R.id.bttnBackAct);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+        profile = findViewById(R.id.bttnProfileAct);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HotelActivity.this, ProfileActivity.class));
             }
         });
     }
@@ -85,7 +113,6 @@ public class HotelActivity extends AppCompatActivity {
 
             TextView namePlace = view1.findViewById(R.id.txtPlace); //txtPlace dari row data2 xml
             ImageView image = view1.findViewById(R.id.imgPlace);// imgPlace dari rowdata2 xml
-
 
             namePlace.setText(namaHotel[i]); // buat yg button tour
             image.setImageResource(imgHotel[i]);// tour

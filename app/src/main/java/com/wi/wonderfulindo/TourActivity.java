@@ -6,14 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class TourActivity extends AppCompatActivity {
     GridView gridView;
+    Button back,profile;
 
     String[] namaTour = {"Borobudur Temple", "Prambanan Temple", "Malioboro Street", "Ratu Boko Temple", "Parangtritis Beach"};
     String[] desTour ={"Located on the island of Java, the magnificent Borobudur temple is the world’s biggest Buddhist monument, an ancient site widely considered to be one of the world’s seven wonders. The temple sits majestically on a hilltop overlooking lush green fields and distant hills. Built in the 9th century during the reign of the Syailendra dynasty, the temple’s design in Gupta architecture reflects India's influence on the region, yet there are enough indigenous scenes and elements incorporated to make Borobudur uniquely Indonesian.It covers an enormous area, measuring 123 x 123 meters. The monument is a marvel of design, decorated with 2,672 relief panels and 504 Buddha statues. The architecture and stonework of this temple has no equal. And it was built without using any kind of cement or mortar! The structure is like a set of massive interlocking Lego blocks held together without any glue.",
@@ -24,12 +28,18 @@ public class TourActivity extends AppCompatActivity {
             "Ratu Boko is Located about 3 km south of Prambanan. Ratu Boko is situated atop of a hill ± 195.97 m above sea level. Ratu Boko is not a temple, but a remains of a palace. Ratu Baka is often called Kraton Ratu Boko. Legend said that Ratu Boko once a palace for Ratu Boko, the father of Lara Jonggrang. Ratu Boko is built during the 8th century AD by the Buddhist Syailendra Dynasty, but then the Hindu Mataram kings took over the place. This take over makes Kraton Ratu Boko is full of Hindu and Buddhist references.A stele was found in Ratu Boko dated 792 AD named Prasasti Abhayagiriwihara. This Stele signs that the Ratu Boko was built by Rakai Panangkaran. Prasasti Abhayagiriwihara is written with Pranagari font, a font used by many Buddhist Steles. In the Stele was mentioned Raja Tejapurnama Panangkarana, which is another name for Rakai Panangkaran",
             "A Romantic Sunset View at Parangtritis.Parangtritis Beach is only 27 km from the center of Jogja City and is famous for its romantic sunset views. Riding a horse cart along Parangtritis Beach in the afternoon will be a sweet memory.Parangtritis is located 27 km south of Yogyakarta and easily accessible by public transportation that operate up to 17:00pm as well as private vehicles. The afternoon before sunset is the best time to visit this most popular beach in Yogyakarta. But if you arrive sooner, it will not hurt for going up to Tebing Gembirawati (Gembirawati cliffs) behind this beach. From there, we can see the whole area of Parangtritis Beach, southern sea, up to the horizon."};
     int[] imgTour = {R.drawable.borobudur4, R.drawable.prambanan,R.drawable.malioboro, R.drawable.ratu, R.drawable.beach1};
-    String[] latlong = {};
+    String[] latlong = {"-7.607735,110.204441", "-7.751999, 110.491435", "-7.792298, 110.365799", "-7.770499, 110.489405", "-8.024674, 110.329620" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final ArrayList<MainModel> tourList = new ArrayList<>();
+        for (int i = 0; i < imgTour.length; i++){
+            MainModel mainModel = new MainModel(imgTour[i], namaTour[i], desTour[i], latlong[i]);
+            tourList.add(mainModel);
+        }
 
         gridView = findViewById(R.id.gridView);
 
@@ -40,10 +50,27 @@ public class TourActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), GridItemActivity.class);
-                intent.putExtra("name", namaTour[i]);
-                intent.putExtra("image", imgTour[i]);
-                intent.putExtra("desc", desTour[i]);
+                intent.putExtra("name", tourList.get(i).getNamatempat());
+                intent.putExtra("image", tourList.get(i).getTempat());
+                intent.putExtra("desc", tourList.get(i).getDesctempat());
+                intent.putExtra("latlong", tourList.get(i).getKoordinat());
                 startActivity(intent);
+            }
+        });
+
+        back = findViewById(R.id.bttnBackAct);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+        profile = findViewById(R.id.bttnProfileAct);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(TourActivity.this, ProfileActivity.class));
             }
         });
     }

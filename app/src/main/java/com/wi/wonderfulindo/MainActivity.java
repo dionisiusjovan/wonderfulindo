@@ -8,12 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     GridView gridView;
+    Button back,profile;
 
     //isi resto
     String[] namaResto ={"Mediteranea Restraurant by Kamil", "Tempo Gelato", "Wedang Ronde Mbah Payem","Gudeg Mbah Lindu Sosrowijayan","Wedang Tahu Bu Sukardi","Ingkung Kuali"};
@@ -37,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     "Price: Rp.6000. ",
             "Ingkung Kuali is famous among locals for its free range chicken, and you can actually taste the freshness of the poultry! This surprising local eatery is located in Pajangan – commonly known as the culinary centre of Yogyakarta, so you know you can have high expectations on the taste!\n Choose between the original boiled chicken or marinated or even fried chicken – although it looks plain and banal when served, the delicacy will surprise you in taste and flavours as it has been mixed, marinated and cooked for over 4 hours, thus the chicken would have soaked up all spices."};
     int[] imgResto = {R.drawable.mediteranea, R.drawable.gelato2, R.drawable.wedang, R.drawable.gudeg2,R.drawable.tahu, R.drawable.ingkuang};
-    String[] latlong = {};
+    String[] latlong = {"-7.818600, 110.364510", "-7.819291, 110.372407", "-7.804399, 110.360965", "-7.791624, 110.364030", "-7.781572, 110.362422", "-7.886704, 110.301637"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
         gridView = findViewById(R.id.gridView);
 
+        final ArrayList<MainModel> restaurantList = new ArrayList<>();
+        for (int i = 0; i < imgResto.length; i++){
+            MainModel mainModel = new MainModel(imgResto[i], namaResto[i], desResto[i], latlong[i]);
+            restaurantList.add(mainModel);
+        }
+
         CustomAdapter customAdapter = new CustomAdapter();
         gridView.setAdapter(customAdapter);
 
@@ -53,13 +63,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), GridItemActivity.class);
-                intent.putExtra("name", namaResto[i]);
-                intent.putExtra("image", imgResto[i]);
-                intent.putExtra("desc", desResto[i]);
+                intent.putExtra("name", restaurantList.get(i).getNamatempat());
+                intent.putExtra("image", restaurantList.get(i).getTempat());
+                intent.putExtra("desc", restaurantList.get(i).getDesctempat());
+                intent.putExtra("latlong", restaurantList.get(i).getKoordinat());
                 startActivity(intent);
             }
         });
 
+        back = findViewById(R.id.bttnBackAct);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+        profile = findViewById(R.id.bttnProfileAct);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+            }
+        });
     }
 
 
@@ -85,8 +111,6 @@ public class MainActivity extends AppCompatActivity {
 
             TextView namePlace = view1.findViewById(R.id.txtPlace); //txtPlace dari row data2 xml
             ImageView image = view1.findViewById(R.id.imgPlace);// imgPlace dari rowdata2 xml
-
-
 
             namePlace.setText(namaResto[i]); // buat yg button tour
             image.setImageResource(imgResto[i]);// tour

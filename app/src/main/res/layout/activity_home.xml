@@ -42,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtJogja"
-        app:layout_constraintVertical_bias="0.100" />
+        app:layout_constraintVertical_bias="0.09" />
 
     <TextView
         android:id="@+id/txtresto"
@@ -87,7 +87,7 @@
         app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toEndOf="@+id/bttnFood"
         app:layout_constraintTop_toBottomOf="@+id/txtJogja"
-        app:layout_constraintVertical_bias="0.100" />
+        app:layout_constraintVertical_bias="0.09" />
 
     <Button
         android:id="@+id/bttnTour"
@@ -102,7 +102,7 @@
         app:layout_constraintHorizontal_bias="0.364"
         app:layout_constraintStart_toEndOf="@+id/bttnHotel"
         app:layout_constraintTop_toBottomOf="@+id/txtJogja"
-        app:layout_constraintVertical_bias="0.100" />
+        app:layout_constraintVertical_bias="0.09" />
 
     <TextView
         android:id="@+id/txtTour"
@@ -119,40 +119,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bttnTour" />
 
-    <EditText
-        android:id="@+id/searchBar"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/search_bar"
-        android:drawableEnd="@drawable/ic_search_black_24dp"
-        android:inputType="text"
-        android:hint="@string/hint"
-        android:fontFamily="@font/geosans_light"
-        android:textSize="12sp"
-        android:textColor="@color/black"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtJogja"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049"/>
-
     <Button
         android:id="@+id/bttnProfile"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
+        android:layout_marginLeft="356dp"
         android:background="@drawable/button_bulet"
         android:drawableTop="@drawable/ic_016_tourist"
         android:shadowColor="@color/shadow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toEndOf="@+id/searchBar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -160,8 +139,8 @@
         android:id="@+id/txtBucketL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="430dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="420dp"
         android:layout_marginBottom="236dp"
         android:fontFamily="@font/montserratbold"
         android:text="@string/bucketlist"
@@ -177,7 +156,7 @@
         android:id="@+id/txtDescBL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="20dp"
         android:fontFamily="@font/geosans_light"
         android:text="@string/desBL"
         android:textColor="@color/black"
@@ -193,7 +172,7 @@
         android:id="@+id/slideBL"
         android:layout_width="387dp"
         android:layout_height="180dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

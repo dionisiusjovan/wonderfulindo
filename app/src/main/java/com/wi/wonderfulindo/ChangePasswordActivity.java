@@ -97,8 +97,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChangePasswordActivity.this, ProfileActivity.class));
-                finish();
+                onBackPressed();
             }
         });
 

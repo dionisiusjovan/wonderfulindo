@@ -1,5 +1,6 @@
 package com.wi.wonderfulindo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 
@@ -17,11 +18,22 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapActivity extends FragmentActivity implements OnMapReadyCallback {
 
     GoogleMap map;
+    double lat = -7.607735;
+    double lng = 110.204441;
+    String name = "Borobudur";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.map);
+
+        String latlng = getIntent().getStringExtra("latlong");
+        if (latlng != null && !latlng.isEmpty()){
+            String[] ll = latlng.split(",");
+            lat = Double.parseDouble(ll[0]);
+            lng = Double.parseDouble(ll[1]);
+        }
+        name = getIntent().getStringExtra("placeName");
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -32,8 +44,11 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
 
-        LatLng Borobudur = new LatLng(-7.607735, 110.204441);
-        map.addMarker(new MarkerOptions().position(Borobudur).title("Borobudur"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(Borobudur));
+        LatLng inputLatLong = new LatLng(lat, lng);
+        map.addMarker(new MarkerOptions().position(inputLatLong).title(name));
+        //map.moveCamera(CameraUpdateFactory.newLatLng(inputLatLong));
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(inputLatLong, 15.0f));
+
+
     }
 }

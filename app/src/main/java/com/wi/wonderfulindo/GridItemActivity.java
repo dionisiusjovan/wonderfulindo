@@ -16,6 +16,7 @@ public class GridItemActivity extends AppCompatActivity {
     TextView desc;
     ImageView image;
     Button back, maps;
+    String latlong = "", nama="";
     private static final String TAG = "GridItemActivity";
 
     @Override
@@ -32,21 +33,26 @@ public class GridItemActivity extends AppCompatActivity {
         image = findViewById(R.id.gridImage);
 
         Intent intent = getIntent();
-        judul.setText(intent.getStringExtra("name"));
+        nama = intent.getStringExtra("name");
+        judul.setText(nama);
         desc.setText(intent.getStringExtra("desc"));
         image.setImageResource(intent.getIntExtra("image", 0));
+        latlong = intent.getStringExtra("latlong");
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(GridItemActivity.this, HomeActivity.class));
+                onBackPressed();
             }
         });
 
         maps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(GridItemActivity.this, MapActivity.class));
+                Intent intent1 = new Intent(GridItemActivity.this, MapActivity.class);
+                intent1.putExtra("latlong", latlong);
+                intent1.putExtra("placeName", nama);
+                startActivity(intent1);
             }
         });
 

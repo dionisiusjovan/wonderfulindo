@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/bttnBack"
+        android:id="@+id/bttnBackAct"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="6dp"
@@ -19,11 +19,11 @@
         android:shadowColor="@color/shadow" />
 
     <Button
-        android:id="@+id/bttnProfile"
+        android:id="@+id/bttnProfileAct"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="6dp"
-        android:layout_marginLeft="300dp"
+        android:layout_marginLeft="356dp"
         android:background="@drawable/button_bulet"
         android:drawableTop="@drawable/ic_016_tourist"
         android:layout_toRightOf="@+id/bttnBack"

@@ -51,10 +51,12 @@ public class HomeActivity extends AppCompatActivity implements MainAdapter.OnPic
                 "Now, you can spot her daughter taking over the reins at her stall, though it is said that Mbah Lindu still cooks the Gudeg herself! The story of Mbah Lindu is an emotional one, but it is amazing to see that the family business is still going strong and making hungry stomachs happy!\\nTry their Gudeg for breakfast as it comes with a choice of rice or porridge! The sauce is creamy and spicy, the chicken is soft and falls apart easily as it soaks up the broth while the egg is boiled to perfection!\nOpening hours: Mon-Sun 5am-11am\n" +
                 "\nPrice Range: Rp.15,000-20,000 per portion." };
 
+        String[] latlong = {"-7.607735,110.204441", "-7.605704,110.1782953", "-7.819291, 110.372407", "-7.791624, 110.364030"};
+
         //inisialisasi arraylist
         mainModels = new ArrayList<>();
         for (int i=0; i<tempat.length; i++){
-            MainModel model = new MainModel(tempat[i], namatempat[i], desctempat[i]);
+            MainModel model = new MainModel(tempat[i], namatempat[i], desctempat[i], latlong[i]);
             mainModels.add(model);
         }
 
@@ -110,13 +112,9 @@ public class HomeActivity extends AppCompatActivity implements MainAdapter.OnPic
         intent.putExtra("name", mainModels.get(position).getNamatempat());
         intent.putExtra("image", mainModels.get(position).getTempat());
         intent.putExtra("desc", mainModels.get(position).getDesctempat());
+        intent.putExtra("latlong", mainModels.get(position).getKoordinat());
         startActivity(intent);
     }
 
-    /*Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-        */
     }
 
