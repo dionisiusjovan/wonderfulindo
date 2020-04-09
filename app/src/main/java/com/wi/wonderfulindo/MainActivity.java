@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                     "Price: Rp.6000. ",
             "Ingkung Kuali is famous among locals for its free range chicken, and you can actually taste the freshness of the poultry! This surprising local eatery is located in Pajangan – commonly known as the culinary centre of Yogyakarta, so you know you can have high expectations on the taste!\n Choose between the original boiled chicken or marinated or even fried chicken – although it looks plain and banal when served, the delicacy will surprise you in taste and flavours as it has been mixed, marinated and cooked for over 4 hours, thus the chicken would have soaked up all spices."};
     int[] imgResto = {R.drawable.mediteranea, R.drawable.gelato2, R.drawable.wedang, R.drawable.gudeg2,R.drawable.tahu, R.drawable.ingkuang};
-
+    String[] latlong = {};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

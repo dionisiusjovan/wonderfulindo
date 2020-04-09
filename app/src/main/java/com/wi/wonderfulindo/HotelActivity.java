@@ -36,6 +36,7 @@ public class HotelActivity extends AppCompatActivity {
                     "Address: Jalan Margoutomo No.103 (Mangkubumi), Yogyakarta 55232 – Indonesia\n" +
                     "Contact:  +62 274 2920101 "};
     int[] imgHotel={R.drawable.hotel1, R.drawable.hotel2,R.drawable.hotel3, R.drawable.hotel4, R.drawable.hotel5};
+    String[] latlong = {};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
