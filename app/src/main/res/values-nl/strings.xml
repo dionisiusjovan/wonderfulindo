@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Explore Jogja</string>
+    <string name="register">Registreren</string>
+    <string name="email">E-mailadres</string>
+    <string name="pass">Wachtwoord</string>
+    <string name="oldpass">Uw vorige wachtwoord</string>
+    <string name="newpass">Uw nieuwe wachtwoord</string>
+    <string name="confirm">Bevestig uw nieuwe wachtwoord</string>
+    <string name="save">Bewaar data</string>
+    <string name="change">Verander wachtwoord</string>
+    <string name="signinhere">Log hier in als u een account heeft</string>
+    <string name="signin">Log In</string>
+    <string name="signout">Log Out</string>
+    <string name="jogja">Jogja is een getalenteerde teaser, in staat om het hart van iedereen die haar bezoekt te betoveren. In korte tijd zijn velen al verliefd op haar geworden. Er zijn redenen waarom mensen haar niet zouden verlaten. Haar eenvoud, vriendelijkheid, kunst en cultuur, culinair, aan haar verschillende levensritme. Het is geen wonder dat verliefd worden op haar gewoon onweerstaanbaar is.</string>
+    <string name="resto">Restaurant</string>
+    <string name="tour">Tour</string>
+    <string name="hotel">Hotel</string>
+    <string name="hint">Where do we go today?</string>
+    <string name="borobudur">Borobudur Temple</string>
+    <string name="gelato">Tempo Gelato</string>
+    <string name="gudeg">Gudeg Mbah Lindu</string>
+    <string name="gereja">Gereja Ayam</string>
+    <string name="bucketlist">De bucketlist van Jogja</string>
+    <string name="desBL">Beste ervaring in de speciale regio</string>
+    <string name="desBorobudur">Gelegen op het eiland Java</string>
+
+</resources>

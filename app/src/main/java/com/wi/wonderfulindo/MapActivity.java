@@ -84,7 +84,7 @@ public class MapActivity extends FragmentActivity implements OnMapReadyCallback 
                 } else{
                     final AlertDialog.Builder builder = new AlertDialog.Builder(this);
                     builder.setTitle("Functionally Limited");
-                    builder.setMessage("Since location access has not been granted, this app will not be able to discover places when in the background.");
+                    builder.setMessage("Since location access has not been granted, this app may not be able to discover places when in the background.");
                     builder.setPositiveButton(android.R.string.ok, null);
                     builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
                         @Override

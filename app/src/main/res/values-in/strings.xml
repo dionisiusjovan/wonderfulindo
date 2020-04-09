@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Explore Jogja</string>
+    <string name="register">Daftar Akun</string>
+    <string name="email">Alamat Email</string>
+    <string name="pass">Kata Sandi</string>
+    <string name="oldpass">Kata Sandi Sebelumnya</string>
+    <string name="newpass">Kata Sandi Baru</string>
+    <string name="confirm">Konfirmasi Kata Sandi</string>
+    <string name="save">Simpan</string>
+    <string name="change">Ubah Password</string>
+    <string name="signinhere">Masuk Di Sini Jika Sudah Punya Akun</string>
+    <string name="signin">Masuk</string>
+    <string name="signout">Keluar</string>
+    <string name="jogja">Jogja adalah penggoda berbakat, mampu memikat hati siapa pun yang mengunjunginya. Hanya dalam waktu singkat, banyak yang telah jatuh cinta padanya. Ada alasan mengapa orang menolak untuk meninggalkannya. Kesederhanaannya, keramahan, seni dan budaya, kuliner, dengan ritme kehidupannya yang berbeda. Tidak heran jika jatuh cinta padanya tak tertahankan.</string>
+    <string name="resto">Restoran</string>
+    <string name="tour">Tur</string>
+    <string name="hotel">Hotel</string>
+    <string name="hint">Where do we go today?</string>
+    <string name="borobudur">Candi Borobudur</string>
+    <string name="gelato">Tempo Gelato</string>
+    <string name="gudeg">Gudeg Mbah Lindu</string>
+    <string name="gereja">Gereja Ayam</string>
+    <string name="bucketlist">Daftar Favorit Jogja</string>
+    <string name="desBL">Pengalaman Terbaik di Daerah Istimewa Yogyakarta</string>
+    <string name="desBorobudur">Terletak di Pulau Jawa</string>
+
+</resources>
