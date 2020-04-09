@@ -7,4 +7,6 @@
     <color name="black">#000000</color>
     <color name="buttonwhite">#F2F2F2</color>
     <color name="shadow">#4d4d4d</color>
+    <color name="colorActivity">#6856CB</color>
+    <color name="colorActivity2">#e5e5e5</color>
 </resources>

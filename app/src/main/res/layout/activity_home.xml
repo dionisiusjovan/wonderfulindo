@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".HomeActivity"
-    android:background="@drawable/background1">
+    android:background="@drawable/background1"
+    android:orientation="vertical">
 
 
     <TextView
@@ -14,6 +15,9 @@
         android:layout_width="334dp"
         android:layout_height="115dp"
         android:width="484dp"
+        android:paddingTop="1dp"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
         android:text="@string/jogja"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,23 +74,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bttnHotel" />
 
-    <TextView
-        android:id="@+id/txtBucketL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="430dp"
-        android:layout_marginBottom="236dp"
-        android:fontFamily="@font/montserratbold"
-        android:text="@string/bucketlist"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/bttnHotel"
         android:layout_width="50dp"
@@ -140,10 +127,12 @@
         android:background="@drawable/search_bar"
         android:drawableEnd="@drawable/ic_search_black_24dp"
         android:inputType="text"
-        android:text="@string/hint"
+        android:hint="@string/hint"
         android:fontFamily="@font/geosans_light"
         android:textSize="12sp"
         android:textColor="@color/black"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
         app:layout_constraintBottom_toTopOf="@+id/txtJogja"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -166,6 +155,23 @@
         app:layout_constraintStart_toEndOf="@+id/searchBar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtBucketL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginBottom="236dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="@string/bucketlist"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtDescBL"
@@ -193,7 +199,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtBucketL" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

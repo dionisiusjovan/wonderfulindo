@@ -51,7 +51,7 @@ public class TourActivity extends AppCompatActivity {
     private class CustomAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return imgTour.length; // kalo button tour yg di pencet
+            return imgTour.length;
 
         }
 

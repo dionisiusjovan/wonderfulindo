@@ -35,7 +35,7 @@ public class HotelActivity extends AppCompatActivity {
                     "If modish and flashy is your style, the hotel is perfect for your holiday. You’ll stay in rooms that are done in a very à la mode fashion, with chic wall murals and furnishings.  And where better to fill your Instagram feed with style-icon moments than at the contemporary in-house cafes? You’ll love to take a refreshing dip in the infinity swimming pool with modern design too  \nRates: From USD $60 (approximately IDR 798,300). Deluxe Pool Access rooms from USD $78 (approximately IDR 1,037,790)\n" +
                     "Address: Jalan Margoutomo No.103 (Mangkubumi), Yogyakarta 55232 – Indonesia\n" +
                     "Contact:  +62 274 2920101 "};
-    int[] imgHotel={R.drawable.hotel, R.drawable.hotel2,R.drawable.hotel3, R.drawable.hotel4, R.drawable.hotel5};
+    int[] imgHotel={R.drawable.hotel1, R.drawable.hotel2,R.drawable.hotel3, R.drawable.hotel4, R.drawable.hotel5};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +65,7 @@ public class HotelActivity extends AppCompatActivity {
     private class CustomAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return imgHotel.length; //kalo button hotel
-
+            return imgHotel.length;
         }
 
         @Override

@@ -23,7 +23,7 @@
         <activity android:name=".HomeActivity" />
         <activity
             android:name=".ProfileActivity"
-            android:theme="@style/RegisterTheme" />
+            android:theme="@style/ProfileTheme" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
@@ -40,10 +40,14 @@
             android:name=".LoginActivity"
             android:theme="@style/RegisterTheme" />
         <activity android:name=".MainActivity"
-            android:theme="@style/RegisterTheme"/>
+            android:theme="@style/ActivityTheme"/>
+        <activity android:name=".TourActivity"
+            android:theme="@style/ActivityTheme"/>
+        <activity android:name=".HotelActivity"
+            android:theme="@style/ActivityTheme"/>
         <activity
             android:name=".GridItemActivity"
-            android:theme="@style/RegisterTheme" />
+            android:theme="@style/GridViewTheme" />
     </application>
 
 </manifest>
