@@ -52,7 +52,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String old = oldPass.getText().toString();
-                String newp = newPass.getText().toString();
+                final String newp = newPass.getText().toString();
                 String confirm = confirmPass.getText().toString();
                 if (old.isEmpty()){
                     oldPass.setError("Please enter your password!");
@@ -77,14 +77,19 @@ public class ChangePasswordActivity extends AppCompatActivity {
                     firebaseUser.reauthenticate(credential).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            progressBar.setVisibility(View.GONE);
-                            if (task.isSuccessful()){
-                                Toast.makeText(ChangePasswordActivity.this, "Changing Password Success!", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(ChangePasswordActivity.this, ProfileActivity.class));
-                                finish();
-                            } else {
-                                Toast.makeText(ChangePasswordActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            }
+                            firebaseUser.updatePassword(newp).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    progressBar.setVisibility(View.GONE);
+                                    if (task.isSuccessful()){
+                                        Toast.makeText(ChangePasswordActivity.this, "Changing Password Success!", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(ChangePasswordActivity.this, ProfileActivity.class));
+                                        finish();
+                                    } else {
+                                        Toast.makeText(ChangePasswordActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                            });
                         }
                     });
                 } else {

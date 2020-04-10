@@ -1,27 +1,27 @@
 <resources>
     <string name="app_name">Explore Jogja</string>
-    <string name="register">Register</string>
-    <string name="email">Email Address</string>
-    <string name="pass">Password</string>
-    <string name="oldpass">Your Previous Password</string>
-    <string name="newpass">Your New Password</string>
-    <string name="confirm">Confirm Your New Password</string>
-    <string name="save">Save</string>
-    <string name="change">Change Password</string>
-    <string name="signinhere">Sign In here if You have An Account</string>
-    <string name="signin">Sign In</string>
-    <string name="signout">Sign Out</string>
-    <string name="jogja">Jogja is a talented teaser, capable of enchanting the heart of anyone visiting her. In just a short time, many have already fallen in love with her. There are reasons why people would refuse to leave her. Her simplicity, friendliness, arts and culture, culinary, to her different kind of life rhythm. It is no wonder that falling in love with her is just irresistible.</string>
-    <string name="resto">Restaurant</string>
+    <string name="register" translatable="false">Register</string>
+    <string name="email" translatable="false">Email Address</string>
+    <string name="pass" translatable="false">Password</string>
+    <string name="oldpass" translatable="false">Your Previous Password</string>
+    <string name="newpass" translatable="false">Your New Password</string>
+    <string name="confirm" translatable="false">Confirm Your New Password</string>
+    <string name="save" translatable="false">Save</string>
+    <string name="change" translatable="false">Change Password</string>
+    <string name="signinhere" translatable="false">Sign In here if You have An Account</string>
+    <string name="signin" translatable="false">Sign In</string>
+    <string name="signout" translatable="false">Sign Out</string>
+    <string name="jogja" translatable="false">Jogja is a talented teaser, capable of enchanting the heart of anyone visiting her. In just a short time, many have already fallen in love with her. There are reasons why people would refuse to leave her. Her simplicity, friendliness, arts and culture, culinary, to her different kind of life rhythm. It is no wonder that falling in love with her is just irresistible.</string>
+    <string name="resto" translatable="false">Restaurant</string>
     <string name="tour">Tour</string>
     <string name="hotel">Hotel</string>
     <string name="hint">Where do we go today?</string>
-    <string name="borobudur">Borobudur Temple</string>
+    <string name="borobudur" translatable="false">Borobudur Temple</string>
     <string name="gelato">Tempo Gelato</string>
     <string name="gudeg">Gudeg Mbah Lindu</string>
     <string name="gereja">Gereja Ayam</string>
-    <string name="bucketlist">Jogja s Bucket List</string>
-    <string name="desBL">Best experience in the Special Region</string>
-    <string name="desBorobudur">Located on the island of Java</string>
+    <string name="bucketlist" translatable="false">Jogja s Bucket List</string>
+    <string name="desBL" translatable="false">Best experience in the Special Region</string>
+    <string name="desBorobudur" translatable="false">Located on the island of Java</string>
 
 </resources>
