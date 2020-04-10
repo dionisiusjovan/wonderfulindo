@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">164916198231-sd8a9imss3891unnm1qin7p55nq2usnt.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://wonderful-indonesia-74e3b.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">164916198231</string>
+    <string name="google_api_key" translatable="false">AIzaSyA0-DcwqU3tpdniGEVXRvF8B5R219LZHfM</string>
+    <string name="google_app_id" translatable="false">1:164916198231:android:064bc8ec70adf909b11c12</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA0-DcwqU3tpdniGEVXRvF8B5R219LZHfM</string>
+    <string name="google_storage_bucket" translatable="false">wonderful-indonesia-74e3b.appspot.com</string>
+    <string name="project_id" translatable="false">wonderful-indonesia-74e3b</string>
+</resources>
